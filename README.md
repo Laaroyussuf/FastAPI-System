@@ -32,8 +32,7 @@ This project implements a backend system using **FastAPI** and **SQLAlchemy ORM*
 ### **Installation**
 1. Clone the repository:
 ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/Laaroyussuf/FastAPI-System.git
 ```
 
 2. Create and activate a virtual environment:
