@@ -32,13 +32,13 @@ This project implements a backend system using **FastAPI** and **SQLAlchemy ORM*
 ### **Installation**
 1. Clone the repository:
 ```bash
-   git clone https://github.com/Laaroyussuf/FastAPI-System.git
+git clone https://github.com/Laaroyussuf/FastAPI-System.git
 ```
 
 2. Create and activate a virtual environment:
 ```bash
-    python -m venv venv
-    source venv\Scripts\activate
+python -m venv venv
+source venv\Scripts\activate
 ```
 
 3. Install dependencies:
@@ -49,20 +49,20 @@ pip install -r requirements.txt
 4. Set up environment variables:
 Create a .env file in the project root:
 ```env
-    OPENAI_API_KEY=<your-openai-api-key>
-    GROQ_API_KEY=<your-groq-api-key>
-    WEATHER_API_KEY=<your-weather-api-key>
+OPENAI_API_KEY=<your-openai-api-key>
+GROQ_API_KEY=<your-groq-api-key>
+WEATHER_API_KEY=<your-weather-api-key>
 ```
 Replace placeholders with your API keys.
 
 5. Initialize the database:
 ```bash
-    python app/database.py
+python app/database.py
 ```
 
 6. Run the application:
 ```bash
-    uvicorn app.main:app --reload
+uvicorn app.main:app --reload
 ```
 
 ### **API Endpoints**
@@ -70,27 +70,27 @@ Replace placeholders with your API keys.
 Description: Classifies user messages as food or weather and generates AI responses.
 Request:
 ```json
-    {
-    "content": "How do I prepare pasta?"
-    }
+{
+"content": "How do I prepare pasta?"
+}
 ```
 Response:
 ```json
-    {
-    "user_message": {
-        "id": 1,
-        "is_ai": false,
-        "content": "How do I prepare pasta?",
-        "timestamp": "2024-12-22T10:00:00"
-    },
-    "ai_response": {
-        "id": 2,
-        "is_ai": true,
-        "content": "Here is how you can prepare pasta...",
-        "timestamp": "2024-12-22T10:00:01"
-    },
-    "classification": "food"
-    }
+{
+"user_message": {
+"id": 1,
+"is_ai": false,
+"content": "How do I prepare pasta?",
+"timestamp": "2024-12-22T10:00:00"
+  },
+"ai_response": {
+"id": 2,
+"is_ai": true,
+"content": "Here is how you can prepare pasta...",
+"timestamp": "2024-12-22T10:00:01"
+  },
+"classification": "food"
+}
 ```
 
 **2. POST /documents**
@@ -98,30 +98,30 @@ Description: Uploads a PDF, splits it into pages, and stores embeddings in Chrom
 Request: Upload a .pdf file.
 Response:
 ```json
-    {
-    "message": "Document uploaded and processed successfully.",
-    "document_id": 1
-    }
+{
+"message": "Document uploaded and processed successfully.",
+"document_id": 1
+}
 ```
 
 **3. GET /messages**
 Description: Retrieves all stored messages from the database.
 Response:
 ```json
-    [
-    {
-        "id": 1,
-        "is_ai": false,
-        "content": "How do I prepare pasta?",
-        "timestamp": "2024-12-22T10:00:00"
-    },
-    {
-        "id": 2,
-        "is_ai": true,
-        "content": "Here is how you can prepare pasta...",
-        "timestamp": "2024-12-22T10:00:01"
-    }
-    ]
+[
+{
+"id": 1,
+"is_ai": false,
+"content": "How do I prepare pasta?",
+"timestamp": "2024-12-22T10:00:00"
+},
+{
+"id": 2,
+"is_ai": true,
+"content": "Here is how you can prepare pasta...",
+"timestamp": "2024-12-22T10:00:01"
+}
+]
 ```
 
 ### **Assumptions**
@@ -132,12 +132,12 @@ Response:
 ### **Testing Instructions**
 Run the FastAPI server:
 ```bash
-    uvicorn app.main:app --reload
+uvicorn app.main:app --reload
 ```
 
 ### **Access the Swagger documentation at:**
 ```arduino
-    http://127.0.0.1:8000/docs
+http://127.0.0.1:8000/docs
 ```
 Use the available endpoints to test functionality.
 
