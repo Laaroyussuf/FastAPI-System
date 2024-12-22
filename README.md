@@ -151,4 +151,3 @@ Use the available endpoints to test functionality.
     ├── routers
     ├── services
     ├── main.py
-    README.md
