@@ -19,6 +19,7 @@ def create_message(db: Session, content: str, is_ai: bool) -> Message:
     db.refresh(message)
     return message
 
+
 def get_all_messages(db: Session) -> list[Message]:
     """
     Retrieve all messages from the database.
