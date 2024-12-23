@@ -126,19 +126,19 @@ Response:
 
 ### **Challenges**
 1. Groq API Integration
-- Limited documentation for Groq’s API required significant experimentation to seamlessly implement RAG for food-related queries. Debugging issues like query prompt construction and response extraction was a key learning experience.
+  - Limited documentation for Groq’s API required significant experimentation to seamlessly implement RAG for food-related queries. Debugging issues like query prompt construction and response extraction was a key learning experience.
 
 2. Weather API Response Formatting
-- While retrieving raw weather data from the Weather API was straightforward, transforming it into a meaningful, user-friendly natural language response using GPT-4 required careful prompt engineering and error handling.
+  - While retrieving raw weather data from the Weather API was straightforward, transforming it into a meaningful, user-friendly natural language response using GPT-4 required careful prompt engineering and error handling.
 
 3. ChromaDB Integration
-- Implementing the ChromaDB client for document embeddings and retrieval required a deep understanding of its configuration and query mechanisms. Debugging storage and retrieval of embeddings involved challenges with ensuring correct vector format and efficient document querying.
+  - Implementing the ChromaDB client for document embeddings and retrieval required a deep understanding of its configuration and query mechanisms. Debugging storage and retrieval of embeddings involved challenges with ensuring correct vector format and efficient document querying.
 
 4. Document Processing
-- Splitting PDFs into pages and extracting meaningful content for embedding presented challenges, particularly with non-standard PDF formats or low-quality text extraction.
+  - Splitting PDFs into pages and extracting meaningful content for embedding presented challenges, particularly with non-standard PDF formats or low-quality text extraction.
 
 5. Combining Multiple AI Models
-- Integrating multiple models (Llama-3.3-70b-versatile for RAG and GPT-4 for weather responses) while maintaining modularity in the codebase required careful design and testing.
+  - Integrating multiple models (Llama-3.3-70b-versatile for RAG and GPT-4 for weather responses) while maintaining modularity in the codebase required careful design and testing.
 
 ### **Assumptions**
 1. User queries are text-based and can relate to food or weather.
