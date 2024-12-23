@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 from app.models import DocumentPage
 
+
 def create_document_page(db: Session, document_id: int, page_number: int, content: str) -> DocumentPage:
     """
     Create a new document page record.
@@ -24,6 +25,7 @@ def create_document_page(db: Session, document_id: int, page_number: int, conten
     db.commit()
     db.refresh(page)
     return page
+
 
 def mark_page_as_processed(db: Session, page_id: int) -> DocumentPage:
     """

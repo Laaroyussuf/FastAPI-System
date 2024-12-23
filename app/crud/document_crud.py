@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 from app.models import Document
 
+
 def create_document(db: Session, title: str, file_path: str) -> Document:
     """
     Create a new document record.
