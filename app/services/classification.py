@@ -18,7 +18,6 @@ def classify_message(content: str) -> str:
         str: One of 'food', 'weather', or 'unknown'.
     """
     try:
-        # Chat-based prompt
         messages = [
             {"role": "system", "content": "You are an assistant that classifies user messages into categories. "
                                           "The categories are:\n"
@@ -29,15 +28,14 @@ def classify_message(content: str) -> str:
                                         "Respond with only one word: 'food', 'weather', or 'unknown'."}
         ]
 
-        # Use the chat completions endpoint
         response = openai.ChatCompletion.create(
-            model="gpt-4",  # Ensure you use a supported chat model
+            model="gpt-4", 
             messages=messages,
             max_tokens=5,
             temperature=0  # Reduce randomness
         )
 
-        # Extract and sanitize the classification
+        # Extract the classification
         classification = response.choices[0].message['content'].strip().lower()
 
         # Ensure valid classification
